@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QUẢN LÝ"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Tiêu đề Nhân viên -->
+    <TextView
+        android:id="@+id/tvNhanVien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nhân Viên"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Nhập nhân viên + Nút đổi -->
+    <EditText
+        android:id="@+id/edtNhanVien"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:hint="Nguyen Van A"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:background="@drawable/text_border"
+        app:layout_constraintTop_toBottomOf="@id/tvNhanVien"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDoi"
+        app:layout_constraintHorizontal_weight="1"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/btnDoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đổi"
+        android:padding="10dp"
+        android:backgroundTint="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/tvNhanVien"
+        app:layout_constraintStart_toEndOf="@id/edtNhanVien"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"/>
+
+    <!-- Tiêu đề Danh sách sách -->
+    <TextView
+        android:id="@+id/tvDanhSachSach"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Danh sách sách"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/edtNhanVien"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
